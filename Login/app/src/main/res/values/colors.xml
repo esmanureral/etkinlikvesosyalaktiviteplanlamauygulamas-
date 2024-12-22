@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="green">#0D7511</color>
+    <color name="purple">#835CC8</color>
+    <color name="gray">#9A9A96</color>
+    <color name="navigationBarColor">#673AB7</color>
+    <color name="green_light">#81C784</color>
+    <color name="blue">#2196F3</color>
+    <color name="amber">#FFC107</color>
+    <color name="colorGray">#B6AF9A</color>
+
+</resources>

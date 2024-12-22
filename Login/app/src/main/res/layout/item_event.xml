@@ -1,0 +1,158 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:elevation="4dp">
+
+    <LinearLayout
+        android:id="@+id/etkinlik"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="onEtkinlikClick">
+
+        <!-- Etkinlik Adı ve Resmi Yatay Düzen -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/eventNameText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:text="Etkinlik Adı"
+                android:textColor="@color/green"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/eventImageView"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="8dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/placeholder" />
+
+            <!-- Kalp simgesi (favorilere eklemek için) -->
+            <ImageView
+                android:id="@+id/favoriteIcon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_favorite_border"
+                android:contentDescription="Favori Ekle"
+                android:layout_marginStart="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="onFavoriteClick" />
+        </LinearLayout>
+
+        <!-- Etkinlik Tarihi -->
+        <TextView
+            android:id="@+id/eventDateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Etkinlik Tarihi"
+            android:textSize="16sp" />
+
+
+
+
+        <!-- Butonlar Yatay Düzen -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:id="@+id/katilbuton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Etkinliğe Katıl"
+                android:backgroundTint="#4CAF50"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/katilmabuton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:backgroundTint="#F44336"
+                android:text="Etkinliğe Katılma"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <!-- Kullanıcı Adı Etiketi -->
+                <TextView
+                    android:id="@+id/kullanici_adi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kullanıcı Adı:"
+                    android:textSize="16sp"
+                    android:textColor="@color/black" />
+
+                <!-- Kullanıcı Adı Değeri -->
+                <TextView
+                    android:id="@+id/kullanici_adi_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yükleniyor..."
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/yorum_alani"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Yorumunuzu yazın"
+                android:inputType="textMultiLine"
+                android:background="@drawable/rounded_edittext"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray" />
+
+            <!-- Yorum Gönder Butonu -->
+            <Button
+                android:id="@+id/yorum_gonder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="Yorum Gönder"
+                android:background="@drawable/rounded_button"
+                android:textColor="@color/white"
+                android:padding="10dp" />
+        </LinearLayout>
+
+        <!-- Yorumlar Listesi (RecyclerView) -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/yorumlar_listesi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

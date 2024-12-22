@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp"
+    android:background="#F9F9F9"
+    android:elevation="4dp"
+    android:layout_margin="8dp">
+
+    <!-- Kullanıcı adı -->
+    <TextView
+        android:id="@+id/usernameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kullanıcı Adı"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:textColor="#035306"
+        android:paddingBottom="4dp" />
+
+    <!-- Yorum metni -->
+    <TextView
+        android:id="@+id/commentText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bu bir yorum örneğidir. Yorumlar burada görünecektir."
+        android:textSize="14sp"
+        android:lineSpacingExtra="3dp"
+        android:textColor="#000000" />
+</LinearLayout>

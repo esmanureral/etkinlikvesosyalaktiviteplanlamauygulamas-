@@ -1,0 +1,20 @@
+<!-- res/drawable/edit_text_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Arka plan rengi -->
+    <solid android:color="@color/white" />
+
+    <!-- Yuvarlatılmış köşeler -->
+    <corners android:radius="8dp" />
+
+    <!-- İsteğe bağlı kenarlık -->
+    <stroke
+        android:width="5dp"
+        android:color="#4CAF50" />
+
+    <!-- İsteğe bağlı iç boşluk -->
+    <padding
+        android:left="8dp"
+        android:right="8dp"
+        android:top="4dp"
+        android:bottom="4dp" />
+</shape>

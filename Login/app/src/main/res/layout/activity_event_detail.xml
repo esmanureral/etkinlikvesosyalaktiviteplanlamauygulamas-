@@ -1,0 +1,18 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/participantCountText"
+        android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Toplam Katılımcı: 0"
+    android:textSize="18sp"
+    android:layout_marginBottom="16dp"
+    android:gravity="start"
+    android:textColor="#000000" />
+
+</LinearLayout>
